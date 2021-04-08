@@ -40,10 +40,10 @@ class App extends React.Component {
   render() {
     return <div>
       <GrandParent grand='EMENIKE' parent='Kelechi' child='Emmanuel' />
-      <hr />
+      {/* <hr />
       <Parent parent_name='EMENIKE' child_name='Esther' />
       <hr />
-      <Child child_name='Enoch' />
+      <Child child_name='Enoch' /> */}
     </div>
   }
 }
