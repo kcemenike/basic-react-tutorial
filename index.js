@@ -2,12 +2,12 @@
 
 /// Parent component (it's actually a JS function)
 function Parent(props) {
-  const { parent_name } = props
+  const { parent_name, child_name } = props
   return (
     <div>
       <h1>The Parent</h1>
       <h3>Name: {parent_name}</h3>
-      <Child />
+      <Child child_name={child_name} />
     </div>
   )
 }
@@ -27,7 +27,7 @@ const Child = (props) => {
 class App extends React.Component {
   render() {
     return <div>
-      <Parent parent_name='EMENIKE' />
+      <Parent parent_name='EMENIKE' child_name='Esther' />
       <hr />
       <Child child_name='Enoch' />
     </div>
