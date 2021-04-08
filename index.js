@@ -12,11 +12,12 @@ function Parent(props) {
 }
 
 /// Child component (let's use arrow function this time)
-const Child = () => {
+const Child = (props) => {
+  const { child_name } = props
   return (
     <div>
       <h1>The Child</h1>
-      <h3>Name:</h3>
+      <h3>Name: {child_name} </h3>
     </div>
   )
 }
@@ -26,7 +27,7 @@ class App extends React.Component {
   render() {
     return <div>
       <Parent parent_name='EMENIKE' />
-      <Child />
+      <Child child_name='Enoch' />
     </div>
   }
 }
