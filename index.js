@@ -7,6 +7,7 @@ function Parent(props) {
     <div>
       <h1>The Parent</h1>
       <h3>Name: {parent_name}</h3>
+      <Child />
     </div>
   )
 }
@@ -27,6 +28,7 @@ class App extends React.Component {
   render() {
     return <div>
       <Parent parent_name='EMENIKE' />
+      <hr />
       <Child child_name='Enoch' />
     </div>
   }
