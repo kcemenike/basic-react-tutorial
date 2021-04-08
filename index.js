@@ -1,5 +1,17 @@
 // Create components
 
+/// Grandparent
+const GrandParent = (props) => {
+  const { grand, parent, child } = props
+  return (
+    <div>
+      <h1>GrandParent</h1>
+      <h3>Name: {grand}</h3>
+      <Parent parent_name={parent} child_name={child} />
+    </div>
+  )
+}
+
 /// Parent component (it's actually a JS function)
 function Parent(props) {
   const { parent_name, child_name } = props
@@ -27,6 +39,8 @@ const Child = (props) => {
 class App extends React.Component {
   render() {
     return <div>
+      <GrandParent grand='EMENIKE' parent='Kelechi' child='Emmanuel' />
+      <hr />
       <Parent parent_name='EMENIKE' child_name='Esther' />
       <hr />
       <Child child_name='Enoch' />
